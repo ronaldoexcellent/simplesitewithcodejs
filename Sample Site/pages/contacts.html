@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<article>
+    <h1>My contacts</h1>
+    <div></div>
+</article>
+<engine>
+    <script src="../js/components/codejsl.cjs"></script>
+    <script>
+        $links = ['tel:+2349114349748', 'sms:+2349114349748', 'mailto:ronaldinhoexcellent@gmail.com', 'https://facebook.com/ronaldinhoexcellent', 'https://m.me/ronaldinhoexcellent', 'https://instagram.com/ronaldo.excellent', 'https://twitter.com/ronaldoexcel', 'https://github.com/ronaldoexcellent', 'https://reddit.com/user/ronaldoexcellent', 'https://buymeacoffee.com/ronaldoexcel'];
+        $titles = ['+2349114349748', '+2349114349748', 'ronaldinhoexcellent@gmail.com', '/ronaldinhoexcellent', '/ronaldinhoexcellent', '@ronaldo.excellent', '@ronaldoexcel', '/ronaldoexcellent', '/user/ronaldoexcellent', '/ronaldoexcel'];
+        $platforms = ['Tel', 'SMS', 'Email', 'Facebook', 'Messenger', 'Instagram', 'Twitter', 'Github', 'Reddit', 'Buy Me A Coffee'];
+
+        loop($links, () => {
+            pushAfter($('div'), `<b>${$platforms[i]}</b>: <a href="${$links[i]}" title="Ronaldo Excellent">${$titles[i]}</a> <br>`);
+        });
+
+        css($('div'), 'line-height: 2em;');
+    </script>
+</engine>

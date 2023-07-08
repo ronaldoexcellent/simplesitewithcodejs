@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<article>
+  <h1 align="center">Welcome to Code JS Official Website.</h1>
+  <div class="animation"></div>
+  <style>
+    .animation, .animation img {
+      width: 100%;
+      animation: slide 2s;
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(100%)
+      } to {
+        transform: translateX(0)
+      }
+    }
+  </style>
+</article>
+<engine>
+    <script src="../js/components/codejsl.cjs"></script>
+    <script>
+      //Create animation for home page
+      arrayOf(5, ()=>{
+        pushBefore($('.animation'), `<img style="display:block" class="animated" src="../files/images/app${n}.jpg" />`);
+      });
+      $$('.animated')[0].style.display = 'block';
+      animate($('.animation'), 5000);
+    </script>
+</engine>
